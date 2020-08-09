@@ -1,0 +1,16 @@
+[
+  {
+    "name": "success",
+    "path": "/success",
+    "component": "/Users/konstantinsrdjanov/workspace/sutrra-demo.github.io/pages/success/index.vue",
+    "chunkName": "pages/success/index",
+    "_name": "_d401df8e"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/konstantinsrdjanov/workspace/sutrra-demo.github.io/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_01a00376"
+  }
+]

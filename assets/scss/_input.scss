@@ -1,4 +1,8 @@
 input[type="text"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     transition: all .2s ease;
 
     background-color: $color-medium;
@@ -7,6 +11,8 @@ input[type="text"]{
     border-radius: 0;
     width: 100%;
     padding: 20px;
+    line-height: 16px;
+    font-size: 14px;
 
     &.error{
         border-color: $color-danger;

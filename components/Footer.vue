@@ -2,7 +2,7 @@
     <footer class="bg-primary py-16">
         <div class="container">
             <div class="grid items-center grid-cols-12">
-                <div class="lg:col-span-8 md:col-span-12">
+                <div class="col-span-12 md:col-span-8 text-center md:text-left mb-12 md:mb-0">
                     <img class="logo" src="@/assets/img/logo-white.svg">
 
                     <label class="color-bright text-sm font-primary block mb-6 mt-6">
@@ -13,11 +13,11 @@
                     <a class="color-dark text-sm font-primary" href="mailto:hello@suttra.com">hello@suttra.com</a>
                 </div>
 
-                <div class="lg:col-span-4 md:col-span-12 text-right">
-                    <label class="color-bright text-sm font-primary mb-2 mt-6">
+                <div class="col-span-12 md:col-span-4 text-center md:text-right">
+                    <label class="color-bright text-sm font-primary mt-6">
                         Pronađite nas ovde:<br>
 
-                        <span class="text-left" style="margin-right: 75px; margin-top: 10px;">
+                        <span class="mt-2 inline-block text-center md:text-left">
                             <a href="" class="mr-2" target="_blank">
                                 <img width="28" heigth="28" src="@/assets/img/icon-instagram.svg">
                             </a>

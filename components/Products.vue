@@ -1,18 +1,19 @@
 <template>
     <div class="mt-24">
         <div class="container">
-            <ul class="grid grid-cols-12 gap-10 mb-24">
-                <li v-for="product, index in products" class="lg:col-span-4 md:col-span-12 sm:col-span-12 md:mb-10">
+            <ul class="grid grid-cols-12 gap-0 sm:gap-6 md:gap-8 lg:gap-10 mb-24">
+                <li v-for="product, index in products" 
+                    class="col-span-12 md:col-span-4 mb-16 md:mb-0 ">
                     <div class="product-box bg-pale relative py-20">
                         <h2 class="font-secondary uppercase text-2xl">{{ product.name }}</h2>
 
-                        <img width="240" height="180" :src="product.image_url">
+                        <img :src="product.image_url">
                     </div>
 
                     <div class="mt-5 grid grid-cols-12 items-center">
-                        <label class="col-span-6 font-primary text-sm">RSD {{ product.price.toFixed(2) }}</label>
+                        <label class="mb-4 sm:mb-0 col-span-12 sm:col-span-6 font-primary text-sm">RSD {{ product.price.toFixed(2) }}</label>
                         
-                        <div class="col-span-6">
+                        <div class="col-span-12 sm:col-span-6">
                             <div class="quantity bg-pale">
                                 <button @click="remove(index)" class="font-primary">-</button>
                                 <input
@@ -37,8 +38,8 @@
                     <validation-observer v-slot="{ handleSubmit, invalid }">
                         <h2 class="font-secondary text-4xl text-center mb-12">Tvoji podaci</h2>
                         
-                        <div class="mb-8 grid grid-cols-12 lg:col-gap-6 md:col-gap-6">
-                            <div class="lg:col-span-6 md:col-span-12 sm:col-span-12 xsm:col-span-12 lg:mb-0 md:mb-6 sm:mb-6 xsm:mb-6">
+                        <div class="mb-8 grid grid-cols-6 col-gap-6">
+                            <div class="col-span-6 sm:col-span-6 md:col-span-3 sm:mb-6 mb-6 md:mb-0">
                                 <validation-provider
                                     v-slot="{ errors, failedRules }"
                                     :rules="{ required: true, max: 50 }">
@@ -53,7 +54,7 @@
                                 </validation-provider>
                             </div>
                             
-                            <div class="lg:col-span-6 md:col-span-12 sm:col-span-12 xsm:col-span-12">
+                            <div class="col-span-6 sm:col-span-6 md:col-span-3">
                                 <validation-provider 
                                     v-slot="{ errors, failedRules }"
                                     :rules="{ required: true, max: 50 }">
@@ -141,7 +142,7 @@
                             </validation-provider>
                         </div>
 
-                        <div class="mb-10 text-center">
+                        <div class="mb-12 text-center">
                             <label class="font-primary text-sm color-primary">Ukupan iznos vaše porudžbine je:</label>
                             <label class="font-primary text-sm color-dark block mt-2 mb-2">RSD {{ total.toLocaleString('de-DE') }}</label>
 
@@ -155,7 +156,7 @@
                     </validation-observer>
                 </div>
 
-                <p class="font-primary text-xs color-primary" style="max-width: 500px; text-align: center; margin: 60px auto 0 auto;">
+                <p class="font-primary text-xs color-primary" style="max-width: 500px; text-align: center; margin: 100px auto 0 auto;">
                     Podaci koji se prikupljaju kroz formu za naručivanje koristiće se isključivo za komunikaciju u vezi da isporukom poručenih proizvoda i obaveštavanje o novim proizvodima, posebnim ponudama i sl. Vaši podaci biće obrađivani u skladu sa odredbama važećih zakona Republike Srbije.
                 </p>
             </div>
@@ -377,7 +378,7 @@ button.btn-primary div.lds-ripple{
     
 }
 div.form{
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
 
     input, 
@@ -428,6 +429,7 @@ div.product-box{
         top: -12px;
     }
     img{
+        max-width: 85%;
         display: block;
         margin: 0 auto;
     }

@@ -1,0 +1,32 @@
+*{
+    text-decoration: none;
+}
+
+.font-primary{
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+label,p{
+    line-height: 1.3;
+}
+
+.font-secondary{
+    font-family: 'Lora';
+}
+
+.color-primary{
+    color: $color-primary;
+}
+
+.color-dark{
+    color: $color-dark !important;
+}
+
+.color-bright{
+    color: #fff;
+}
+
+.color-danger{
+    color: $color-danger;
+}

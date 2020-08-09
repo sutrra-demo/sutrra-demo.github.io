@@ -1,0 +1,20 @@
+[
+    {
+        "id": "0b3bdfbd-9659-4c45-91aa-2c89a08009ed",
+        "name": "Black",
+        "price": 1760,
+        "image_url": "https://i.imgur.com/gcylJbU.png"
+    },
+    {
+        "id": "828f3a95-585d-40e4-8199-b77312fafc23",
+        "name": "Olive",
+        "price": 1760,
+        "image_url": "https://i.imgur.com/CGWat8B.png"
+    },
+    {
+        "id": "05875f4a-f6e4-4988-972a-2867ef5ab252",
+        "name": "Nude",
+        "price": 1760,
+        "image_url": "https://i.imgur.com/S9bB4KW.png"
+    }
+]

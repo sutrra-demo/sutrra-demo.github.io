@@ -1,0 +1,15 @@
+.btn-primary{
+    transition: all 0.2s ease;
+    padding: 20px;
+
+    color: #fff;
+    background-color: $color-primary;
+    font-size: 14px;
+
+    border: none;
+    border-radius: 0;
+
+    &:focus{
+        outline: none;
+    }
+}

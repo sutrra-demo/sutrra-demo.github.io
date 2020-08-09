@@ -18,11 +18,11 @@
                         Pronađite nas ovde:<br>
 
                         <span class="mt-2 inline-block text-center md:text-left">
-                            <a href="" class="mr-2" target="_blank">
+                            <a href="https://www.instagram.com/sutrra_/?igshid=1dbgj0sttsa0z" class="mr-2" target="_blank">
                                 <img width="28" heigth="28" src="@/assets/img/icon-instagram.svg">
                             </a>
         
-                            <a href="" target="_blank">
+                            <a href="https://www.facebook.com/Sutrra_-103957201414674/" target="_blank">
                                 <img width="28" heigth="28" src="@/assets/img/icon-facebook.svg">
                             </a>
                         </span>

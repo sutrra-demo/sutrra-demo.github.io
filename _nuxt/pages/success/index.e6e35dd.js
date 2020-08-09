@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{215:function(n,t,e){"use strict";e.r(t);var c={data:function(){return{email:""}},mounted:function(){this.email=this.$route.query.email}},l=e(33),component=Object(l.a)(c,(function(){var n=this.$createElement;return(this._self._c||n)("div",[this._v("\n    Success\n")])}),[],!1,null,null,null);t.default=component.exports}}]);

@@ -11,7 +11,7 @@
                     </div>
 
                     <div class="mt-5 grid grid-cols-12 items-center">
-                        <label class="col-span-6 font-primary text-sm">RSD {{ product.price.toFixed(2) }}</label>
+                        <label class="col-span-6 font-primary text-sm">{{ product.price.toFixed(2) }} RSD</label>
                         
                         <div class="col-span-6">
                             <div class="quantity bg-pale">

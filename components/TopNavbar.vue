@@ -14,6 +14,11 @@ header.navigation {
         img{
             width: 150px;
             height: 40px;
+
+            @media all and (max-width: 992px) {
+                height: 30px;
+                width: auto;
+            }
         }
     }
 }

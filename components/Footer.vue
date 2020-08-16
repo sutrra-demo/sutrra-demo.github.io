@@ -10,7 +10,7 @@
                         Kontaktirajte nas na:
                     </label>
 
-                    <a class="color-dark text-sm font-primary" href="mailto:hello@suttra.com">hello@suttra.com</a>
+                    <a class="color-dark text-sm font-primary" href="mailto:sutrra.shop@gmail.com">sutrra.shop@gmail.com</a>
                 </div>
 
                 <div class="col-span-12 md:col-span-4 text-center md:text-right">

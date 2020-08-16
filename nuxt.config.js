@@ -38,7 +38,9 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    { src: '@/plugins/vee-validate', ssr: false }
+    { src: '@/plugins/vee-validate', ssr: false },
+    { src: '@/plugins/ga.js', mode: 'client' },
+    { src: '@/plugins/fb-pixel.js' }
   ],
   /*
   ** Auto import components

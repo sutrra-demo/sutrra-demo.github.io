@@ -4,7 +4,7 @@
             <ul class="grid grid-cols-12 gap-0 sm:gap-6 md:gap-8 lg:gap-10 mb-24">
                 <li v-for="product, index in products" 
                     class="col-span-12 md:col-span-4 mb-16 md:mb-0 ">
-                    <div class="product-box bg-pale relative py-20">
+                    <div class="product-box bg-pale relative">
                         <h2 class="font-secondary uppercase text-2xl">{{ product.name }}</h2>
 
                         <img :src="product.image_url">
@@ -33,7 +33,7 @@
             </ul>
         </div>
         <div class="bg-pale pt-24 pb-24">
-            <div class="container relative">
+            <div class="container relative md:overflow-hidden lg:overflow-visible">
                 <img class="floating-logo floating-logo--big" src="@/assets/img/logo-letter-big.svg">
                 <div class="form">
                     <validation-observer v-slot="{ handleSubmit, invalid }">
@@ -145,7 +145,7 @@
 
                         <div class="mb-12 text-center">
                             <label class="font-primary text-sm color-primary">Ukupan iznos vaše porudžbine je:</label>
-                            <label class="font-primary text-sm color-dark block mt-2 mb-2">RSD {{ total.toLocaleString('de-DE') }}</label>
+                            <label class="font-primary text-sm color-dark block mt-2 mb-2">{{ total.toLocaleString('de-DE') }} RSD</label>
 
                             <label class="font-primary text-sm color-primary">Porudžbina se plaća pouzećem.</label>
                         </div>
@@ -433,6 +433,9 @@ div.quantity{
 }
 
 div.product-box{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
     h2{
         position: absolute;
         left: 20px;
@@ -440,13 +443,13 @@ div.product-box{
     }
 
     img{
-        max-width: 240px;
-        width: 80%;
+        max-width: 300px;
+        width: 85%;
         display: block;
         margin: 0 auto;
 
         @media all and (max-width: 768px) {
-            max-width: 50%;
+            max-width: 60%;
         }
     }
 }

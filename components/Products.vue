@@ -320,6 +320,7 @@ function submit() {
         }) 
         .catch((error) => {
             this.loading = false;
+            this.$router.push('/error');
         });
     }
 }

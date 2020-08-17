@@ -165,66 +165,20 @@
             </div>
         </div>
 
-
-        <!-- Begin Mailchimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-            #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-        </style>
-        <div id="mc_embed_signup" style="display: none;">
-        <form action="https://gmail.us17.list-manage.com/subscribe/post?u=4c3323fb3ed29df6ed2a9a50d&amp;id=6f8936c088" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-            <h2>Subscribe</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group">
-                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-            </label>
-                <input v-model="email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-FNAME">First Name </label>
-                <input v-model="firstname" type="text" value="" name="FNAME" class="" id="mce-FNAME">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-LNAME">Last Name </label>
-                <input v-model="lastname" type="text" value="" name="LNAME" class="" id="mce-LNAME">
-            </div>
-            <div class="mc-field-group size1of2">
-                <label for="mce-PHONE">Phone Number </label>
-                <input v-model="phone" type="text" name="PHONE" class="" value="" id="mce-PHONE">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-ADDRESS">Address </label>
-                <input v-model="address" type="text" value="" name="ADDRESS" class="" id="mce-ADDRESS">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-CITY">City </label>
-                <input v-model="city" type="text" value="" name="CITY" class="" id="mce-CITY">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-POSTAL">Postal </label>
-                <input v-model="postal" type="text" value="" name="POSTAL" class="" id="mce-POSTAL">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-TOTAL">Total </label>
-                <input v-model="total" type="text" value="" name="TOTAL" class="" id="mce-TOTAL">
-            </div>
-            <div class="mc-field-group">
-                <label for="mce-ITEMS">Items </label>
-                <input v-model="bag" type="text" value="" name="ITEMS" class="" id="mce-ITEMS">
-            </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4c3323fb3ed29df6ed2a9a50d_6f8936c088" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-            </div>
+        <div style="display: none;">
+        <form action="../contact.php" method="post">
+            <input v-model="email" type="email" value="" name="cf_email" class="required email" id="mce-EMAIL">
+            <input v-model="firstname" type="text" value="" name="cf_fname" class="" id="mce-FNAME">
+            <input v-model="lastname" type="text" value="" name="cf_lname" class="" id="mce-LNAME">
+            <input v-model="phone" type="text" name="cf_phone" class="" value="" id="mce-PHONE">
+            <input v-model="address" type="text" value="" name="cf_address" class="" id="mce-ADDRESS">
+            <input v-model="city" type="text" value="" name="cf_city" class="" id="mce-CITY">
+            <input v-model="postal" type="text" value="" name="cf_postal" class="" id="mce-POSTAL">
+            <input v-model="total" type="text" value="" name="cf_total" class="" id="mce-TOTAL">
+            <input v-model="bag" type="text" value="" name="cf_items" class="" id="mce-ITEMS">
+            <input type="submit" value="Subscribe" name="cf_subscribe" id="mc-embedded-subscribe" class="button">
         </form>
         </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[6]='ADDRESS';ftypes[6]='text';fnames[3]='CITY';ftypes[3]='text';fnames[5]='POSTAL';ftypes[5]='text';fnames[7]='TOTAL';ftypes[7]='text';fnames[8]='ITEMS';ftypes[8]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         <!--End mc_embed_signup-->
     </div>
 </template>
@@ -371,10 +325,8 @@ function submit() {
 }
 
 async function submitMailChimp(total, bag) {
-    const mceButton = document.getElementById("mc-embedded-subscribe");
-    mceButton.click();
-
-    this.$router.push('/success');
+    const submitContactForm = document.getElementById("mc-embedded-subscribe");
+    submitContactForm.click();
 }
 </script>
 

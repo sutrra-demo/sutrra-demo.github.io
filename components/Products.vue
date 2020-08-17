@@ -294,11 +294,14 @@ function submit() {
     if(this.total) {
         this.loading = true;
 
+        const date = new Date();
+
         axios({
             method: "post",
             url: "https://api.airtable.com/v0/appGa3yFLdTClsX2h/Orders",
             data: {
                 "fields": {
+                    "Timestamp": `${date.toDateString()} ${date.toLocaleTimeString()}`,
                     "Firstname": this.firstname,
                     "Lastname": this.lastname,
                     "Address": this.address,

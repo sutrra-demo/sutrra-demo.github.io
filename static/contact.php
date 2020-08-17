@@ -27,14 +27,13 @@ $body_message .= 'Telefon: '.$field_phone."\n";
 $body_message .= 'Račun: '.$field_total.' rsd'."\n";
 $body_message .= 'Proizvodi: '.$field_items."\n"."\n";
 
-
 $body_message .= 'Troškovi poštarine nisu uračunati u cenu proizvoda i obračunavaju se prema cenovniku Postexpress kurirske službe.'."\n";
 $body_message .= 'Ovo je automatsko obaveštenje. Molimo vas da ne odgovarate na ovaj e-mail.'."\n";
 
 
 $headers = 'From: '.$field_owner_email."\r\n";
 $headers .= 'Reply-To: '.$field_owner_email."\r\n";
-$headers = "Content-Type: text/plain; charset=UTF-8";
+$headers .= "Content-Type: text/plain; charset=UTF-8";
 
 $mail_status_1 = mail($field_owner_email, $subject, $body_message, $headers);
 $mail_status = mail($mail_to, $subject, $body_message, $headers);

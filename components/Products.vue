@@ -33,7 +33,7 @@
             </ul>
         </div>
         <div class="bg-pale pt-24 pb-24">
-            <div class="container relative md:overflow-hidden lg:overflow-visible">
+            <div class="container relative md:overflow-hidden lg:overflow-visible" style="z-index: 10">
                 <img class="floating-logo floating-logo--big" src="@/assets/img/logo-letter-big.svg">
                 <div class="form">
                     <validation-observer v-slot="{ handleSubmit, invalid }">
@@ -337,6 +337,7 @@ async function submitMailChimp(total, bag) {
 <style lang="scss">
 img.floating-logo {
     position: absolute;
+    z-index: -1;
 
     &.floating-logo--big{
         width: 240px;
